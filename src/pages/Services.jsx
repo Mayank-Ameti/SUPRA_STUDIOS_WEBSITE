@@ -1,34 +1,48 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import './Services.css';
+import { Link } from 'react-router-dom';
 
-const ServicesPage = () => {
-  const navigate = useNavigate();
+const servicesList = [
+  "Film Production",
+  "Indie Films (90M content)",
+  "Web Series",
+  "Replace Serials",
+  "Short Films / Documentaries",
+  "Theatre Production",
+  "Ad Films / Music Videos",
+];
 
-  // Optional: Curtain animation here
-  useEffect(() => {
-    const left = document.querySelector('.curtain-left');
-    const right = document.querySelector('.curtain-right');
-
-    left.classList.add('open-left');
-    right.classList.add('open-right');
-  }, []);
+const Services = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <div className="services-container">
-      <div className="curtain-left"></div>
-      <div className="curtain-right"></div>
+      <h1 className="services-title">Our Services</h1>
 
-      <div className="services-content">
-        <h1>Our Services</h1>
-        <p>We produce films, documentaries, and branded content with creative excellence.</p>
+      <div className="stacked-card-wrapper">
+        {servicesList.map((service, index) => (
+          <div
+            key={index}
+            className={`service-card ${hoveredIndex === index ? 'hovered' : hoveredIndex !== null ? 'not-hovered' : ''}`}
+            style={{
+              left: `${index * 140}px`, // offset horizontally
+              zIndex: hoveredIndex === index ? 10 : index,
+            }}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <h2>{service}</h2>
+          </div>
+        ))}
+      </div>
 
-        <button className="back-btn" onClick={() => navigate('/')}>
-          ← Back to Home
-        </button>
+      <div className="services-nav">
+        <Link to="/home" className="nav-btn">Home</Link>
+        <Link to="/about" className="nav-btn">About Us</Link>
+        <Link to="/contact" className="nav-btn">Contact</Link>
       </div>
     </div>
   );
 };
 
-export default ServicesPage;
+export default Services;

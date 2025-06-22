@@ -34,7 +34,7 @@ const HomePage = () => {
 
       <div className="cards-section">
         <Link to="/services" className="info-card">Services</Link>
-        <div className="info-card">About Us</div>
+        <Link to="/about" className="info-card">About Us</Link>
         <div className="info-card">Contact</div>
       </div>
     </motion.div>
