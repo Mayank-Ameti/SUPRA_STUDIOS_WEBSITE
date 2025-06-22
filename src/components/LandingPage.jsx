@@ -58,7 +58,7 @@ const LandingPage = () => {
 
       {!started ? (
         <div className="start-screen">
-          <h1>SUPRA STUDIOS</h1>
+          
           <button onClick={handleStart} className="start-btn">Enter</button>
         </div>
       ) : showIntro ? (

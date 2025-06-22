@@ -1,6 +1,8 @@
 .homepage {
   text-align: center;
   color: #fefefe;
+  width: 100vw;          /* 🔥 Make it fill the entire screen width */
+  padding: 60px 30px;    /* Optional, adds spacing */
 }
 
 .homepage h2 {

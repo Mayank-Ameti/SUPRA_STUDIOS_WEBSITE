@@ -2,12 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
+import bgImage from '../assets/Homepage-bg.avif'; 
 
 const HomePage = () => {
   return (
     <motion.div
       className="homepage full-section"
-      initial={{ backgroundColor: "#7c0a02", opacity: 0 }}
+      style={{
+        minHeight: '100vh', 
+        minWidth: '100vh',
+        backgroundImage: `linear-gradient(rgba(26, 0, 0, 0.85), rgba(26, 0, 0, 0.85)), url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >

@@ -1,6 +1,8 @@
 body, html, .App {
   margin: 0;
   padding: 0;
+  height : 100%;
+  width: 100%;
   font-family: 'Oswald', sans-serif;
   background-color: #7c0a02;
   overflow-x: hidden;
