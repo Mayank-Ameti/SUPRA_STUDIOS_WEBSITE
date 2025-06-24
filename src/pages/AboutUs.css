@@ -1,11 +1,23 @@
 .aboutus-container {
   min-height: 100vh;
-  color: #fffbe0;
-  padding: 80px 30px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4); 
+  padding: 60px 30px;
+  border-radius: 20px;
+  max-width: 1000px;
   text-align: center;
+  backdrop-filter: blur(4px);
 }
 
 .aboutus-title {
@@ -17,9 +29,9 @@
 
 .aboutus-description {
   font-size: 1.2rem;
-  max-width: 800px;
-  margin-bottom: 25px;
   color: #f9f7ef;
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
 
 .aboutus-links {
@@ -33,12 +45,12 @@
 .aboutus-card {
   background-color: #1a0000;
   color: #FFD700;
-  padding: 20px 35px;
+  padding: 15px 30px;
   border-radius: 10px;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.1rem;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
   transition: all 0.3s ease;
 }
 

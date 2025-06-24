@@ -9,18 +9,24 @@ const HomePage = () => {
     <motion.div
       className="homepage full-section"
       style={{
-        height: '100vh', // not minHeight
-        width: '100vw',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundImage: `linear-gradient(rgba(26, 0, 0, 0.85), rgba(26, 0, 0, 0.85)), url(${bgImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
+  height: '100vh',
+  width: '100vw',
+  overflow: 'hidden',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundImage: `
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    url(${bgImage})
+  `,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundAttachment: 'fixed',
+  border: '10px solid white',
+  boxSizing: 'border-box'
 }}
+
 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
